@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Comparison</title>
+    <link rel="stylesheet" href="css.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Sorting Algorithm Comparison</h1>
+    </header>
+    <main>
+        <div class="container">
+            <button class="btn" onclick="generateAndSort()">Generate and Sort Data</button>
+        </div>
+        
+        <div class="container">
+            <h2>Original Data</h2>
+            <table class="result-table">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Store Name</th>
+                        <th>Rating</th>
+                    </tr>
+                </thead>
+                <tbody id="original-data"></tbody>
+            </table>
+        </div>
+
+        <div class="container">
+            <h2>Top 10 Stores (Quick Sort)</h2>
+            <table class="result-table">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Store Name</th>
+                        <th>Rating</th>
+                    </tr>
+                </thead>
+                <tbody id="quick-sort-data"></tbody>
+            </table>
+        </div>
+
+        <div class="container">
+            <h2>Sorting Times</h2>
+            <p>Quick Sort Time: <span id="quick-sort-time">-</span> ms</p>
+            <p>Selection Sort Time: <span id="selection-sort-time">-</span> ms</p>
+        </div>     
+
+        <div class="container">
+            <h2>Performance Comparison</h2>
+            <canvas id="performanceChart" width="400" height="200"></canvas>
+        </div>
+    </main>
+</body>
+</html>
